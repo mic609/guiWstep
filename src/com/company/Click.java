@@ -29,7 +29,7 @@ public interface Click {
             else{
                 panel.setBackground(Color.RED);
                 panel.repaint();
-                JOptionPane.showMessageDialog(null,"Niepowodzenie logowania. Niepoprawna nazwa użytkownika lub hasło (Student Debil)");
+                JOptionPane.showMessageDialog(null,"Niepowodzenie logowania. Niepoprawna nazwa użytkownika lub hasło");
             }
         }
     }
