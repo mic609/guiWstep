@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Person {
 
     private String imie;
@@ -18,6 +20,28 @@ public class Person {
     }
 
     //------------------------------------------------------------------------------------------------------------------
+
+
+    public String getImie() {
+        return imie;
+    }
+
+    public String getNazwisko() {
+        return nazwisko;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return imie.equals(person.imie) && nazwisko.equals(person.nazwisko);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(imie, nazwisko);
+    }
 
     @Override
     public String toString() {
